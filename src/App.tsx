@@ -82,12 +82,12 @@ export default function App() {
             </div>
 
             {/* Technology Filter */}
-            <TechnologyFilter
-                availableTechnologies={allTechnologies}
-                selectedTechnologies={selectedTechnologies}
-                onToggleTechnology={handleToggleTechnology}
-                onClearAll={handleClearAllFilters}
-            />
+            {/*<TechnologyFilter*/}
+            {/*    availableTechnologies={allTechnologies}*/}
+            {/*    selectedTechnologies={selectedTechnologies}*/}
+            {/*    onToggleTechnology={handleToggleTechnology}*/}
+            {/*    onClearAll={handleClearAllFilters}*/}
+            {/*/>*/}
 
             {/* Projects Results */}
             <div className="space-y-4">

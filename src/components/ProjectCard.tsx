@@ -96,7 +96,7 @@ export function ProjectCard({
             <Button 
               variant="ghost" 
               size="sm" 
-              className="w-full justify-between text-primary hover:bg-primary/5 p-2"
+              className="w-full justify-between text-primary hover:bg-primary/5 hover:text-primary p-2"
             >
               <span>{isExpanded ? "Minder weergeven" : "Meer details weergeven"}</span>
               {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
