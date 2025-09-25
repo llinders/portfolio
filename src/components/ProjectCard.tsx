@@ -48,7 +48,7 @@ export function ProjectCard({
   const { icon: TypeIcon, label: typeLabel, color: typeColor } = getProjectTypeInfo(type);
 
   return (
-    <Card className="w-full bg-white border-primary/20 hover:border-primary/40 transition-all duration-200 hover:shadow-md">
+    <Card className="w-full transition-all duration-200 hover:shadow-md">
       <CardHeader className="space-y-4">
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1 space-y-2">
@@ -78,7 +78,7 @@ export function ProjectCard({
             <Badge 
               key={index} 
               variant="secondary" 
-              className="bg-[--portfolio-tech-bg] border-[--portfolio-tech-border] text-primary text-xs"
+              className="bg-[--accent] border-[--border] text-primary text-xs"
             >
               {tech}
             </Badge>
@@ -113,7 +113,7 @@ export function ProjectCard({
           <div className="flex gap-3 pt-2">
             {githubUrl && (
               <Button 
-                variant="outline" 
+                variant="outline"
                 size="sm" 
                 className="border-primary/30 text-primary hover:bg-primary/5"
                 asChild

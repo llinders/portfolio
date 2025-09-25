@@ -2,6 +2,8 @@ import { useState, useMemo } from "react";
 import { Header } from "./components/Header";
 import { ProjectCard } from "./components/ProjectCard";
 import { TechnologyFilter } from "./components/TechnologyFilter";
+import {Footer} from "./components/Footer";
+import { Button } from "./components/ui/button";
 
 type ProjectType = "personal" | "school" | "professional";
 
@@ -34,6 +36,8 @@ Het systeem bestaat uit drie hoofdonderdelen:
     githubUrl: "https://github.com/llinders/PolyView",
   },
 ];
+
+
 
 export default function App() {
   const [selectedTechnologies, setSelectedTechnologies] = useState<string[]>([]);
@@ -70,8 +74,8 @@ export default function App() {
   };
 
   return (
-      <div className="min-h-screen bg-background">
-        <Header />
+      <div className="min-h-screen">
+        <Header/>
 
         <main className="max-w-4xl mx-auto px-6 py-12">
           <section className="space-y-8">
@@ -122,10 +126,7 @@ export default function App() {
               )}
             </div>
           </section>
-
-          <footer className="mt-16 pt-8 border-t border-primary/20 text-center text-muted-foreground">
-            <p>&copy; 2025 Luc Linders. Gemaakt met React en TypeScript.</p>
-          </footer>
+          <Footer />
         </main>
       </div>
   );
