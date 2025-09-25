@@ -19,17 +19,17 @@ export function TechnologyFilter({
         <div className="space-y-4">
             <div className="flex items-center justify-between">
                 <h3 className="text-lg font-medium text-primary">Filter op Technologie</h3>
-                {selectedTechnologies.length > 0 && (
-                    <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={onClearAll}
-                        className="bg-card text-muted-foreground hover:text-primary"
-                    >
-                        <X className="w-4 h-4 mr-1" />
-                        Alles wissen
-                    </Button>
-                )}
+                {/*{selectedTechnologies.length > 0 && (*/}
+                {/*    <Button*/}
+                {/*        variant="ghost"*/}
+                {/*        size="sm"*/}
+                {/*        onClick={onClearAll}*/}
+                {/*        className="bg-card text-muted-foreground hover:text-primary hover:bg-primary/10"*/}
+                {/*    >*/}
+                {/*        <X className="w-4 h-4 mr-1" />*/}
+                {/*        Alles wissen*/}
+                {/*    </Button>*/}
+                {/*)}*/}
             </div>
 
             <div className="flex flex-wrap gap-2">
@@ -41,8 +41,8 @@ export function TechnologyFilter({
                             variant={isSelected ? "default" : "secondary"}
                             className={`cursor-pointer transition-all duration-200 ${
                                 isSelected
-                                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                                    : "bg-card border-[--portfolio-tech-border] text-primary hover:bg-primary/10"
+                                    ? "bg-accent text-secondary hover:bg-accent/90"
+                                    : "bg-card border-accent text-accent hover:bg-accent/10"
                             }`}
                             onClick={() => onToggleTechnology(tech)}
                         >
@@ -51,12 +51,6 @@ export function TechnologyFilter({
                     );
                 })}
             </div>
-
-            {selectedTechnologies.length > 0 && (
-                <div className="text-sm text-muted-foreground">
-                    Filteren op: {selectedTechnologies.join(", ")}
-                </div>
-            )}
         </div>
     );
 }

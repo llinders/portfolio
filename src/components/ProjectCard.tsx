@@ -72,7 +72,7 @@ export function ProjectCard({
                   <Badge
                       key={index}
                       variant="default"
-                      className="text-primary text-xs"
+                      className="text-text-main text-xs"
                   >
                     {tech}
                   </Badge>

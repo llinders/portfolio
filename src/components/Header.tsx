@@ -5,7 +5,7 @@ export function Header() {
           <div className="flex justify-center items-center space-x-6">
             <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 bg-secondary">
               <img
-                src="https://via.placeholder.com/150/000000/FFFFFF?text=👤"
+                src="resources/profielfoto.jpg"
                 alt="Luc Linders - Profielfoto"
                 className="w-full h-full object-cover rounded-full"
               />

@@ -10,9 +10,12 @@
   /* Color Tokens */
   --color-primary: #2d5a3d;
   --color-secondary: #ffffff;
+  --color-primary-foreground: var(--color-secondary);
+  --color-secondary-foreground: var(--color-primary);
   --color-bg-card: #f5f5f5;
-  --color-accent: #c9a66b;
+  --color-accent: #b48e4e;
   --color-muted: #9eb3a7;
+  --color-muted-foreground: #1b3a2a;
   --color-destructive: #d4183d;
   --color-border: #e3e3da;
   --color-text-main: #1b3a2a;
@@ -23,14 +26,14 @@
   --font-weight-normal: 400;
 }
 
-.dark {
-  --color-primary: oklch(0.985 0 0);
-  --color-secondary: oklch(0.145 0 0);
-  --color-bg-card: oklch(0.145 0 0);
-  --color-accent: oklch(0.269 0 0);
-  --color-destructive: oklch(0.396 0.141 25.723);
-  --color-border: oklch(0.269 0 0);
-}
+/*.dark {*/
+/*  --color-primary: oklch(0.985 0 0);*/
+/*  --color-secondary: oklch(0.145 0 0);*/
+/*  --color-bg-card: oklch(0.145 0 0);*/
+/*  --color-accent: oklch(0.269 0 0);*/
+/*  --color-destructive: oklch(0.396 0.141 25.723);*/
+/*  --color-border: oklch(0.269 0 0);*/
+/*}*/
 
 @layer base {
   header {
