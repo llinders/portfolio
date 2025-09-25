@@ -28,13 +28,21 @@ const projects: Project[] = [
 Het systeem bestaat uit drie hoofdonderdelen:
 1.  Frontend (React): Communiceert met de backend via een REST API om analyses te starten en gebruikt een WebSocket voor real-time voortgangsupdates.
 2.  Backend (FastAPI): Biedt een REST API en een WebSocket aan voor de frontend.
-3.  AI Core (LangGraph): Het "brein" van de applicatie. Het bevat een autonome zoekagent die informatie van het web verzamelt en filtert. Een stateful grafiek orkestreert taken zoals het identificeren, clusteren en samenvatten van perspectieven.`,
-    technologies: ["React", "TypeScript", "Python", "FastAPI", "LangGraph", "Vite"],
+3.  AI Core (LangGraph): Het "brein" van de applicatie. Het bevat een autonome zoekagent die informatie van het web verzamelt en filtert. In een stateful graph worden taken zoals het identificeren, clusteren en samenvatten van perspectieven georkestreert.`,
+    technologies: ["Python", "LangChain", " LangGraph", "FastAPI", "React", "TypeScript", "Vite"],
     date: "Jun 2025 - Sep 2025",
     type: "personal",
-    image: "https://images.unsplash.com/photo-1649451844931-57e22fc82de3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwZGFzaGJvYXJkfGVufDF8fHx8MTc1ODcxNTU2NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "resources/polyview.png",
     githubUrl: "https://github.com/llinders/PolyView",
   },
+  {
+    title: "",
+    shortDescription: "",
+    detailedDescription: "",
+    technologies: [],
+    date: "",
+    type: "personal"
+  }
 ];
 
 
@@ -102,9 +110,8 @@ export default function App() {
               )}
 
               <div className="grid gap-8">
-                {filteredProjects.map((project, index) => (
+                {filteredProjects.map((project) => (
                     <ProjectCard
-                        key={index}
                         title={project.title}
                         shortDescription={project.shortDescription}
                         detailedDescription={project.detailedDescription}
