@@ -5,7 +5,7 @@ export function Header() {
           <div className="flex justify-center items-center space-x-6">
             <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 bg-secondary">
               <img
-                src="../../public/profielfoto.webp"
+                src="./profielfoto.webp"
                 alt="Luc Linders - Profielfoto"
                 className="w-full h-full object-cover rounded-full"
               />
