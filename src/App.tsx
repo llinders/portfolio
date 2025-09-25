@@ -31,7 +31,7 @@ Het systeem bestaat uit drie hoofdonderdelen:
     technologies: ["Python", "LangChain", " LangGraph", "FastAPI", "React", "TypeScript", "Vite"],
     date: "Jun 2025 - Sep 2025",
     type: "personal",
-    image: "resources/polyview.png",
+    image: "./polyview.webp",
     githubUrl: "https://github.com/llinders/PolyView",
   },
   {

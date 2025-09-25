@@ -84,10 +84,10 @@ export function ProjectCard({
           </div>
 
           {/* Right Column: Image */}
-          <div className="w-60 h-48 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
+          <div className="w-80 h-48 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
             <img
                 src={image || "https://via.placeholder.com/150/CCCCCC/FFFFFF?text=Project"}
-                alt={`${title} afbeelding`}
+                alt={`Afbeelding van ${title}`}
                 className="w-full h-full object-cover"
             />
           </div>
