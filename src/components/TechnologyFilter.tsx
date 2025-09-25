@@ -1,6 +1,4 @@
 import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
-import { X } from "lucide-react";
 
 interface TechnologyFilterProps {
     availableTechnologies: string[];
@@ -12,8 +10,7 @@ interface TechnologyFilterProps {
 export function TechnologyFilter({
                                      availableTechnologies,
                                      selectedTechnologies,
-                                     onToggleTechnology,
-                                     onClearAll
+                                     onToggleTechnology
                                  }: TechnologyFilterProps) {
     return (
         <div className="space-y-4">

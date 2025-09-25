@@ -1,9 +1,8 @@
-import {useState, useMemo} from "react";
+import {useMemo, useState} from "react";
 import {Header} from "./components/Header";
 import {ProjectCard} from "./components/ProjectCard";
 import {TechnologyFilter} from "./components/TechnologyFilter";
 import {Footer} from "./components/Footer";
-import {Button} from "./components/ui/button";
 
 type ProjectType = "personal" | "school" | "professional";
 
