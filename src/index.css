@@ -15,6 +15,7 @@
   --color-bg-card: #f5f5f5;
   --color-accent: #b48e4e;
   --color-muted: #9eb3a7;
+  --color-muted-light: color-mix(in srgb, var(--color-muted) 50%, transparent);
   --color-muted-foreground: #1b3a2a;
   --color-destructive: #d4183d;
   --color-border: #e3e3da;

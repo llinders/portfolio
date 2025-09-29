@@ -11,7 +11,8 @@ interface ProjectCardProps {
   title: string;
   shortDescription: string;
   detailedDescription: string;
-  technologies: string[];
+  mainTechnologies: string[];
+  secondaryTechnologies: string[];
   date: string;
   type: ProjectType;
   image?: string;
@@ -23,7 +24,8 @@ export function ProjectCard({
                               title,
                               shortDescription,
                               detailedDescription,
-                              technologies,
+                              mainTechnologies,
+                              secondaryTechnologies,
                               date,
                               type,
                               image,
@@ -68,11 +70,20 @@ export function ProjectCard({
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {technologies.map((tech, index) => (
+              {mainTechnologies.map((tech, index) => (
                   <Badge
                       key={index}
                       variant="default"
-                      className="text-text-main text-xs"
+                      className="text-text-main text-xs bg-muted"
+                  >
+                    {tech}
+                  </Badge>
+              ))}
+              {secondaryTechnologies.map((tech, index) => (
+                  <Badge
+                      key={index}
+                      variant="default"
+                      className="text-text-main text-xs bg-muted-light"
                   >
                     {tech}
                   </Badge>
