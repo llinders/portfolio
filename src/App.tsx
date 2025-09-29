@@ -10,7 +10,8 @@ interface Project {
   title: string;
   shortDescription: string;
   detailedDescription: string;
-  technologies: string[];
+  mainTechnologies: string[];
+  secondaryTechnologies: string[];
   date: string;
   type: ProjectType;
   image?: string;
@@ -28,7 +29,8 @@ Het systeem bestaat uit drie hoofdonderdelen:
 1.  Frontend (React): Communiceert met de backend via een REST API om analyses te starten en gebruikt een WebSocket voor real-time voortgangsupdates.
 2.  Backend (FastAPI): Biedt een REST API en een WebSocket aan voor de frontend.
 3.  AI Core (LangGraph): Het "brein" van de applicatie. Het bevat een autonome zoekagent die informatie van het web verzamelt en filtert. In een stateful graph worden taken zoals het identificeren, clusteren en samenvatten van perspectieven georkestreert.`,
-    technologies: ["Python", "LangChain", " LangGraph", "FastAPI", "React", "TypeScript", "Vite"],
+    mainTechnologies: ["Python", "LangChain", "LangGraph"],
+    secondaryTechnologies: ["FastAPI", "React", "TypeScript", "Vite"],
     date: "Jun 2025 - Sep 2025",
     type: "personal",
     image: "./polyview.webp",
@@ -38,7 +40,8 @@ Het systeem bestaat uit drie hoofdonderdelen:
     title: "",
     shortDescription: "",
     detailedDescription: "",
-    technologies: [],
+    mainTechnologies: [],
+    secondaryTechnologies: [],
     date: "",
     type: "personal"
   }
@@ -48,11 +51,11 @@ Het systeem bestaat uit drie hoofdonderdelen:
 export default function App() {
   const [selectedTechnologies, setSelectedTechnologies] = useState<string[]>([]);
 
-  // Extract all unique technologies from projects
   const allTechnologies = useMemo(() => {
     const techSet = new Set<string>();
     projects.forEach(project => {
-      project.technologies.forEach(tech => techSet.add(tech));
+      project.mainTechnologies.forEach(tech => techSet.add(tech));
+      project.secondaryTechnologies.forEach(tech => techSet.add(tech));
     });
     return Array.from(techSet).sort();
   }, []);
@@ -63,7 +66,7 @@ export default function App() {
       return projects;
     }
     return projects.filter(project =>
-      selectedTechnologies.some(tech => project.technologies.includes(tech))
+      selectedTechnologies.some(tech => project.mainTechnologies.includes(tech) || project.secondaryTechnologies.includes(tech))
     );
   }, [selectedTechnologies]);
 
@@ -117,7 +120,8 @@ export default function App() {
                     title={project.title}
                     shortDescription={project.shortDescription}
                     detailedDescription={project.detailedDescription}
-                    technologies={project.technologies}
+                    mainTechnologies={project.mainTechnologies}
+                    secondaryTechnologies={project.secondaryTechnologies}
                     date={project.date}
                     type={project.type}
                     image={project.image}
