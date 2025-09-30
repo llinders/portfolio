@@ -54,7 +54,7 @@ export function ProjectCard({
   return (
       <Card className="w-full transition-all duration-200 hover:shadow-md">
 
-        <div className="flex flex-row items-start justify-between gap-6 p-6">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-6 p-6">
           {/* Left Column: Title, Date, Tags, and Short Description */}
           <div className="flex-1 space-y-3 min-w-0">
             <div className="space-y-2">
@@ -91,13 +91,23 @@ export function ProjectCard({
                   </Badge>
               ))}
             </div>
+
+            {/* Image for mobile */}
+            <div className="w-full md:hidden rounded-lg overflow-hidden flex-shrink-0 bg-muted mt-4">
+              <img
+                  src={image || "https://via.placeholder.com/150/CCCCCC/FFFFFF?text=Project"}
+                  alt={`Afbeelding van ${title}`}
+                  className="w-full h-full object-cover"
+              />
+            </div>
+
             <CardDescription className="text-base leading-relaxed pt-1">
               {shortDescription}
             </CardDescription>
           </div>
 
-          {/* Right Column: Image */}
-          <div className="w-80 h-48 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
+          {/* Right Column: Image for desktop */}
+          <div className="hidden md:block w-80 h-48 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
             <img
                 src={image || "https://via.placeholder.com/150/CCCCCC/FFFFFF?text=Project"}
                 alt={`Afbeelding van ${title}`}
