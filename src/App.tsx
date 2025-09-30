@@ -30,20 +30,35 @@ Het systeem bestaat uit drie hoofdonderdelen:
 2.  Backend (FastAPI): Biedt een REST API en een WebSocket aan voor de frontend.
 3.  AI Core (LangGraph): Het "brein" van de applicatie. Het bevat een autonome zoekagent die informatie van het web verzamelt en filtert. In een stateful graph worden taken zoals het identificeren, clusteren en samenvatten van perspectieven georkestreert.`,
     mainTechnologies: ["Python", "LangChain", "LangGraph"],
-    secondaryTechnologies: ["FastAPI", "React", "TypeScript", "Vite"],
-    date: "Jun 2025 - Sep 2025",
+    secondaryTechnologies: ["FastAPI", "React", "TypeScript", "Vite", "Node.js", "Pytest"],
+    date: "juni. 2025 - sept. 2025",
     type: "personal",
     image: "./polyview.webp",
     githubUrl: "https://github.com/llinders/PolyView",
   },
   {
-    title: "",
-    shortDescription: "",
-    detailedDescription: "",
-    mainTechnologies: [],
-    secondaryTechnologies: [],
-    date: "",
-    type: "personal"
+    title: "Afstudeerproject: Somtoday Copilot",
+    shortDescription: "Een werkend prototype van een AI-applicatie voor automatische beantwoording van vragen over Somtoday aan de hand van lokale LLM's en Retrieval Augmented Generation (RAG). De afstudeeropdracht is uitgevoerd bij Topicus.",
+    detailedDescription: `Een data pipeline/ETL-proces houdt kennis over Somtoday automatisch up-to-date door het, na een bewerkingsproces, op te slaan in een vector database (ChromaDB). De data pipeline is geschreven in Python en het Apache Airflow framework. De vector database dient als kennisbasis voor het LLM. RAG is toegepast om een LLM te voorzien van relevante context voor de gestelde vraag.
+    Een PostgreSQL database is ontworpen voor het bijhouden van geschiedenis van chatgesprekken.`,
+    mainTechnologies: ["Python", "LangChain", "Apache Airflow"],
+    secondaryTechnologies: ["llama.cpp", "ChromaDB", "Pandas", "NumPY", "Pytest", "PostgreSQL", "Kubernetes", "Docker"],
+    date: "sep. 2023 - mrt. 2024",
+    image: "./somtoday-copilot.webp",
+    type: "school"
+  },
+  {
+    title: "LifeChart app",
+    shortDescription: "Een Proof of Concept cross-platform app met Info Support als opdrachtgever voor GGZ-patienten met een bipolaire stoornis.",
+    detailedDescription: `In de app kunnen GGZ-patienten met een bipolaire stoornis hun stemming, stemmingswisselingen, 
+    ingrijpende gebeurtenissen, en nog meer vastleggen. De patienten kunnen via een scanbare QR code de gegevens 
+    versleuteld delen met de behandelaar. De gegevens worden via een web-portal zichtbaar gemaakt voor de behandelaar.
+    De REST API backend is geschreven in Java EE, maakt gebruik van het JAX-RS framework en volgt een 3-tier architectuur.
+    Voor het realiseren van de cross-platform app is gekozen voor Xamarin.`,
+    mainTechnologies: ["Xamarin", "Java EE"],
+    secondaryTechnologies: ["PostgreSQL", "Jenkins", "JAX-RS", "JUnit", "Mockito", "JavaScript", "HTML"],
+    date: "nov. 2017 - feb. 2018",
+    type: "school"
   }
 ];
 
