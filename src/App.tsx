@@ -30,7 +30,7 @@ Het systeem bestaat uit drie hoofdonderdelen:
 2.  Backend (FastAPI): Biedt een REST API en een WebSocket aan voor de frontend.
 3.  AI Core (LangGraph): Het "brein" van de applicatie. Het bevat een autonome zoekagent die informatie van het web verzamelt en filtert. In een stateful graph worden taken zoals het identificeren, clusteren en samenvatten van perspectieven georkestreert.`,
     mainTechnologies: ["Python", "LangChain", "LangGraph"],
-    secondaryTechnologies: ["FastAPI", "React", "TypeScript", "Vite", "Node.js", "Pytest"],
+    secondaryTechnologies: ["FastAPI", "React", "TypeScript", "TailwindCSS", "Vite", "Node.js", "Pytest"],
     date: "juni. 2025 - sept. 2025",
     type: "personal",
     image: "./polyview.webp",
@@ -48,6 +48,34 @@ Het systeem bestaat uit drie hoofdonderdelen:
     type: "school"
   },
   {
+    title: "PurposeFlow app",
+    shortDescription: "",
+    detailedDescription: "",
+    mainTechnologies: ["Flutter"],
+    secondaryTechnologies: ["Firebase", "Google Cloud Platform", "Pinecone"],
+    date: "feb. 2025 - mei. 2025",
+    type: "professional"
+  },
+  {
+    title: "Cloud management applicatie",
+    shortDescription: "Een Python-gebaseerde terminalapplicatie voor het automatisch genereren en deployen van Vagrantfiles op basis van gebruikersconfiguratie, waarmee cloudomgevingen snel en reproduceerbaar geprovisioned kunnen worden via Infrastructure as Code (IaC).",
+    detailedDescription: "De terminalapplicatie is ontwikkeld in Python en ondersteunt gebruikers bij het beheren van cloudomgevingen via Infrastructure as Code. Op basis van de ingevoerde configuratie genereert de applicatie automatisch een Vagrantfile, waarmee vervolgens virtuele machines gedeployed worden naar een ESXi hypervisor. Dit proces elimineert handmatige configuratie en maakt het mogelijk om omgevingen snel, consistent en reproduceerbaar op te zetten.",
+    mainTechnologies: ["Python", "Vagrant", "ESXi"],
+    secondaryTechnologies: ["PostgreSQL"],
+    date: "mrt. 2023 - juni. 2023",
+    type: "school"
+  },
+  {
+    title: "Stage onderzoek: Performance-optimalisatie E-Brida",
+    shortDescription: `Onderzoek naar performance-optimalisatie van het veredelingssoftwarepakket E-Brida door de inzet van NoSQL-databases. Uitgevoerd bij Agri Information Partners.`,
+    detailedDescription: `Het onderzoek richtte zich op de schaalbaarheidsbeperkingen van het bestaande EAV-datamodel in E-Brida bij het doorzoeken van plant- en zaadeigenschappen over meerdere generaties. Om deze bottlenecks te analyseren en te doorbreken zijn verschillende NoSQL-databases onderzocht en prototypen ontwikkeld. Deze prototypen dienden als proof-of-concept om de zoekprestaties en schaalbaarheid van het systeem te verbeteren.`,
+    mainTechnologies: ["MSSQL", "MongoDB", "Cassandra"],
+    secondaryTechnologies: [],
+    date: "sep. 2018 - feb. 2019",
+    image: "",
+    type: "school"
+  },
+  {
     title: "LifeChart app",
     shortDescription: "Een Proof of Concept cross-platform app met Info Support als opdrachtgever voor GGZ-patienten met een bipolaire stoornis.",
     detailedDescription: `In de app kunnen GGZ-patienten met een bipolaire stoornis hun stemming, stemmingswisselingen, 
@@ -58,6 +86,24 @@ Het systeem bestaat uit drie hoofdonderdelen:
     mainTechnologies: ["Xamarin", "Java EE"],
     secondaryTechnologies: ["PostgreSQL", "Jenkins", "JAX-RS", "JUnit", "Mockito", "JavaScript", "HTML"],
     date: "nov. 2017 - feb. 2018",
+    type: "school"
+  },
+  {
+    title: "Formule 1 competitie informatiesysteem",
+    shortDescription: "Ontwerp en ontwikkeling van een informatiesysteem voor Formule 1-competitiedata, waarin gebruikers voorspellingen kunnen doen voor races en punten ontvangen op basis van hun nauwkeurigheid. InfoSupport was opdrachtgever voor dit project.",
+    detailedDescription: "Voor dit project is een volledig informatiesysteem ontwikkeld om Formule 1-competitiedata te beheren en voorspellingen van gebruikers te verwerken. Gebruikers konden voorspellingen doen over toekomstige grand prix’s en kregen automatisch punten toegekend afhankelijk van de juistheid van hun voorspellingen. De database is ontworpen volgens de FCO-IM methode en uitgewerkt in zowel een Conceptual als Physical Data Model met PowerDesigner. De implementatie is gerealiseerd in MS SQL Server 2016 en voorzien van een abstractielaag met stored procedures en views, waarmee een duidelijke scheiding tussen dataopslag en applicatielogica is bereikt.",
+    mainTechnologies: ["MSSQL", "T-SQL", "FCO-IM"],
+    secondaryTechnologies: [],
+    date: "apr. 2018 - juni. 2018",
+    type: "school"
+  },
+  {
+    title: "OOPD Tower Defense Game",
+    shortDescription: "",
+    detailedDescription: "",
+    mainTechnologies: ["Java"],
+    secondaryTechnologies: [],
+    date: "",
     type: "school"
   }
 ];
