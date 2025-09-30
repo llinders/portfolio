@@ -153,7 +153,7 @@ export default function App() {
     <div className="min-h-screen">
       <Header/>
 
-      <main className="w-full px-18 py-12">
+      <main className="w-full px-6 md:px-18 py-12">
         <section className="space-y-8">
           <div className="text-center space-y-4">
             <h2 className="text-3xl font-bold text-primary">Uitgelichte Projecten</h2>
@@ -162,8 +162,8 @@ export default function App() {
             </p>
           </div>
 
-          <div className="flex flex-row gap-8">
-            <div className="flex-col w-48 shrink-0">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex-col w-full md:w-48 shrink-0">
               <TechnologyFilter
                 availableTechnologies={allTechnologies}
                 selectedTechnologies={selectedTechnologies}
