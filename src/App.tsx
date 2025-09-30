@@ -4,7 +4,7 @@ import {ProjectCard} from "./components/ProjectCard";
 import {TechnologyFilter} from "./components/TechnologyFilter";
 import {Footer} from "./components/Footer";
 
-type ProjectType = "personal" | "school" | "professional";
+type ProjectType = "personal" | "school" | "schoolgroup" | "professional";
 
 interface Project {
   title: string;
@@ -86,7 +86,7 @@ Het systeem bestaat uit drie hoofdonderdelen:
     mainTechnologies: ["Xamarin", "Java EE"],
     secondaryTechnologies: ["PostgreSQL", "Jenkins", "JAX-RS", "JUnit", "Mockito", "JavaScript", "HTML"],
     date: "nov. 2017 - feb. 2018",
-    type: "school"
+    type: "schoolgroup"
   },
   {
     title: "Formule 1 competitie informatiesysteem",
@@ -95,7 +95,7 @@ Het systeem bestaat uit drie hoofdonderdelen:
     mainTechnologies: ["MSSQL", "T-SQL", "FCO-IM"],
     secondaryTechnologies: [],
     date: "apr. 2018 - juni. 2018",
-    type: "school"
+    type: "schoolgroup"
   },
   {
     title: "OOPD Tower Defense Game",
@@ -104,7 +104,7 @@ Het systeem bestaat uit drie hoofdonderdelen:
     mainTechnologies: ["Java"],
     secondaryTechnologies: [],
     date: "",
-    type: "school"
+    type: "schoolgroup"
   }
 ];
 

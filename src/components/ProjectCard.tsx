@@ -3,9 +3,9 @@ import { Card, CardContent, CardDescription, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
-import { ChevronDown, ChevronUp, Calendar, ExternalLink, Github, User, Users, Briefcase } from "lucide-react";
+import { ChevronDown, ChevronUp, Calendar, ExternalLink, Github, User, Users, Briefcase, GraduationCap } from "lucide-react";
 
-type ProjectType = "personal" | "school" | "professional";
+type ProjectType = "personal" | "school" | "schoolgroup" | "professional";
 
 interface ProjectCardProps {
   title: string;
@@ -39,6 +39,8 @@ export function ProjectCard({
       case "personal":
         return { icon: User, label: "Persoonlijk Project", color: "text-primary" };
       case "school":
+        return { icon: GraduationCap, label: "Schoolproject", color: "text-primary" };
+      case "schoolgroup":
         return { icon: Users, label: "Schoolgroepsproject", color: "text-primary" };
       case "professional":
         return { icon: Briefcase, label: "Professioneel Project", color: "text-primary" };
