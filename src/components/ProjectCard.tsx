@@ -129,9 +129,10 @@ export function ProjectCard({
               </Button>
             </CollapsibleTrigger>
             <CollapsibleContent className="space-y-4 pt-4">
-              <div className="text-sm text-foreground/80 leading-relaxed whitespace-pre-line border-t border-primary/10 pt-4">
-                {detailedDescription}
-              </div>
+              <div
+                className="text-sm text-foreground/80 leading-relaxed whitespace-pre-line border-t border-primary/10 pt-4"
+                dangerouslySetInnerHTML={{ __html: detailedDescription }}
+              />
             </CollapsibleContent>
           </Collapsible>
 
