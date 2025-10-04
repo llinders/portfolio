@@ -18,12 +18,20 @@ export const projects: Project[] = [
   {
     title: "PolyView",
     shortDescription: "Een AI-gestuurde onderzoekstool die diverse perspectieven over een bepaald onderwerp vindt om gebruikers een genuanceerd en holistisch beeld te geven.",
-    detailedDescription: `PolyView is een AI-gestuurde onderzoekstool die diverse perspectieven over een bepaald onderwerp vindt om gebruikers een genuanceerd en holistisch beeld te geven. De applicatie analyseert nieuws-onderwerpen, identificeert verschillende standpunten, verzamelt ondersteunende argumenten en feiten, en presenteert een samengevatte analyse.
-
-Het systeem bestaat uit drie hoofdonderdelen:
-1.  Frontend (React): Communiceert met de backend via een REST API om analyses te starten en gebruikt een WebSocket voor real-time voortgangsupdates.
-2.  Backend (FastAPI): Biedt een REST API en een WebSocket aan voor de frontend.
-3.  AI Core (LangGraph): Het "brein" van de applicatie. Het bevat een autonome zoekagent die informatie van het web verzamelt en filtert. In een stateful graph worden taken zoals het identificeren, clusteren en samenvatten van perspectieven georkestreert.`,
+    detailedDescription: `
+    <p>
+      PolyView is een AI-gestuurde onderzoekstool die diverse perspectieven over een bepaald onderwerp vindt om gebruikers een genuanceerd en holistisch beeld te geven. De applicatie analyseert nieuws-onderwerpen, identificeert verschillende standpunten, verzamelt ondersteunende argumenten en feiten, en presenteert een samengevatte analyse.
+    </p>
+    <figure>
+      <figcaption class="font-semibold">Architectuur</figcaption>
+      <ol>
+        <li>Frontend (React): Communiceert met de backend via een REST API om analyses te starten en gebruikt een WebSocket voor real-time voortgangsupdates.</li>
+        <li>Backend (FastAPI): Biedt een REST API en een WebSocket aan voor de frontend.</li>
+        <li>AI Core (LangGraph): Het "brein" van de applicatie. Het bevat een autonome zoekagent die informatie van het web verzamelt en filtert. In een stateful graph worden taken zoals het identificeren, clusteren en samenvatten van perspectieven georkestreert.</li>
+      </ol>
+    </figure>
+      
+`,
     mainTechnologies: ["Python", "LangChain", "LangGraph"],
     secondaryTechnologies: ["FastAPI", "React", "TypeScript", "TailwindCSS", "Vite", "Node.js", "Pytest"],
     date: "juni. 2025 - sept. 2025",

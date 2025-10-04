@@ -73,3 +73,18 @@
 .footer {
   @apply text-text-muted;
 }
+
+@layer components {
+  .project-description-content {
+    @apply leading-normal;
+  }
+  .project-description-content ol {
+    @apply list-decimal pl-10;
+  }
+  .project-description-content ul {
+    @apply list-disc pl-10;
+  }
+  .project-description-content > * + * {
+    @apply mt-4 p-0;
+  }
+}
