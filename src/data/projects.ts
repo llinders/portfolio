@@ -19,24 +19,55 @@ export const projects: Project[] = [
     title: "PolyView",
     shortDescription: "Een AI-gestuurde onderzoekstool die diverse perspectieven over een bepaald onderwerp vindt om gebruikers een genuanceerd en holistisch beeld te geven.",
     detailedDescription: `
-    <p>
-      PolyView is een AI-gestuurde onderzoekstool die diverse perspectieven over een bepaald onderwerp vindt om gebruikers een genuanceerd en holistisch beeld te geven. De applicatie analyseert nieuws-onderwerpen, identificeert verschillende standpunten, verzamelt ondersteunende argumenten en feiten, en presenteert een samengevatte analyse.
-    </p>
-    <figure>
-      <figcaption class="font-semibold">Architectuur</figcaption>
-      <ol>
-        <li>Frontend (React): Communiceert met de backend via een REST API om analyses te starten en gebruikt een WebSocket voor real-time voortgangsupdates.</li>
-        <li>Backend (FastAPI): Biedt een REST API en een WebSocket aan voor de frontend.</li>
-        <li>AI Core (LangGraph): Het "brein" van de applicatie. Het bevat een autonome zoekagent die informatie van het web verzamelt en filtert. In een stateful graph worden taken zoals het identificeren, clusteren en samenvatten van perspectieven georkestreert.</li>
-      </ol>
-    </figure>
-      
+<p>
+  PolyView is een AI-gestuurde onderzoekstool die diverse perspectieven over een bepaald onderwerp vindt om gebruikers 
+  een genuanceerd en holistisch beeld te geven. De applicatie analyseert nieuws-onderwerpen, identificeert verschillende standpunten, verzamelt ondersteunende argumenten en feiten, en presenteert een samengevatte analyse.
+</p>
+<figure>
+  <figcaption>Architectuur</figcaption>
+  <ol>
+    <li><p>Frontend</p>
+    Gemaakt met React en TypeScript. Communiceert met de backend via een REST API om analyses te starten en gebruikt een WebSocket voor real-time voortgangsupdates.</li>
+    <li><p>Backend</p>
+    Gemaakt in Python met FastAPI. Biedt een REST API en een WebSocket aan voor de frontend en handelt communicatie af met de kern van de applicatie.
+     </li>
+    <li><p>AI Core</p>
+    Gemaakt in Python met het LangChain en LangGraph framework.
+    Het "brein" van de applicatie. Het bevat een autonome zoekagent die informatie van het web verzamelt en filtert. 
+    In een stateful graph worden taken zoals het identificeren, clusteren en samenvatten van perspectieven georkestreert. Wanneer de juiste condities bereikt zijn wat betreft de kwaliteit en diversiteit van perspectieven eindigt de supervisor node het proces.</li>
+  </ol>
+</figure>
+<figure>
+  <figcaption>LangGraph topic analysis workflow</figcaption>
+  <img alt="langgraph-workflow" src="/projects/polyview/workflow-graph.webp" />
+</figure>
+<figure>
+  <figcaption>High-level dataflow</figcaption>
+  <ol>
+    <li><p>Frontend</p>
+      Stuurt een onderwerp naar de REST API van de backend om een analyse te starten.
+    </li>
+    <li><p>Backend</p>
+      Start op de achtergrond de analyseworkflow van de AI Core en maakt een WebSocket-verbinding met de frontend.
+    </li>
+    <li><p>AI Core</p>
+      Voert de workflow graph uit, beginnend met de zoekagent die op internet zoekt naar relevante artikelen uit zoveel mogelijk perspectieven.
+      Vervolgens worden de analysetaken uitgevoerd en eventueel een nieuwe zoekopdracht gestart als blijkt dat er perspectieven ontbreken of meer informatie nodig is. 
+      Dit is een iteratief proces wat zich herhaalt tot er voldoende kwalitatieve informatie is verzameld. 
+      Wanneer de door AI geschreven perspectieven compleet zijn, wordt er een samenvatting gemaakt en het proces beindigt.
+    </li>
+    <li><p>Voortgang stream</p>
+      De voortgang wordt in real-time via de WebSocket teruggestuurd naar de frontend die bij elke update de UI bijwerkt. De samenvatting wordt token voor token gestreamd tot het hele rapport compleet is.
+    </li>
+  </ol>
+</figure>
+
 `,
     mainTechnologies: ["Python", "LangChain", "LangGraph"],
     secondaryTechnologies: ["FastAPI", "React", "TypeScript", "TailwindCSS", "Vite", "Node.js", "Pytest"],
     date: "juni. 2025 - sept. 2025",
     type: "personal",
-    image: "./polyview.webp",
+    image: "/projects/polyview/polyview.webp",
     githubUrl: "https://github.com/llinders/PolyView",
   },
   {
@@ -47,7 +78,7 @@ export const projects: Project[] = [
     mainTechnologies: ["Python", "LangChain", "Apache Airflow"],
     secondaryTechnologies: ["llama.cpp", "ChromaDB", "Pandas", "NumPY", "Pytest", "PostgreSQL", "Kubernetes", "Docker"],
     date: "sep. 2023 - mrt. 2024",
-    image: "./somtoday-copilot.webp",
+    image: "/projects/somtoday-copilot/somtoday-copilot.webp",
     type: "school"
   },
   {
