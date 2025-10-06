@@ -84,7 +84,17 @@
   .project-description-content ul {
     @apply list-disc pl-10;
   }
+  .project-description-content li p {
+    /*Assuming we only use p inside a li element as a 'heading'*/
+    @apply underline;
+  }
   .project-description-content > * + * {
     @apply mt-4 p-0;
+  }
+  .project-description-content figcaption {
+    @apply font-semibold;
+  }
+  .project-description-content img {
+    @apply rounded-lg max-w-2/3;
   }
 }
